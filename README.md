@@ -1,2 +1,2 @@
 # dotfiles
-Some profiles for debian
+Some profiles for debian of WSL
