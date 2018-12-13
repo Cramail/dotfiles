@@ -30,7 +30,8 @@ alias ..='cd ../'
 #  Adding PATH
 #------------------------------------------------------------
 SHELLSCRIPT_PATH=~/.shellscript/
-export PATH=$PATH:$SHELLSCRIPT_PATH
+PROFILES=/mnt/s/Working/dotfiles/
+export PATH=$PATH:$SHELLSCRIPT_PATH:$PROFILES
 
 #------------------------------------------------------------
 #  Java Setting

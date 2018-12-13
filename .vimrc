@@ -34,7 +34,7 @@ set softtabstop=2
 set smartindent
 
 """ Normal Mode
-nnoremap Y y$			
+nnoremap Y y$
 nnoremap ss :split<CR>
 nnoremap vs :vsplit<CR>
 nnoremap sj <C-w>j
@@ -45,8 +45,8 @@ nnoremap wq :wq<CR>
 nnoremap qq :q!<CR>
 nnoremap W :w<CR>
 nnoremap <C-o> :e 
-nnoremap <C-f> /g
-nnoremap <C-r> :%s///g
+nnoremap <C-f> /
+nnoremap <C-r> :%s///g<LEFT><LEFT><LEFT>
 nnoremap ; :
 
 """ Insert Mode
@@ -54,8 +54,8 @@ inoremap <C-d> $
 inoremap <C-b> \
 inoremap JK <Esc>
 inoremap jk <Esc>
-inoremap <silent> <C-a> <Esc>^<Insert>			
-inoremap <silent> <C-e> <Esc>$<Insert><Right>	
+inoremap <silent> <C-a> <Esc>^<Insert>
+inoremap <silent> <C-e> <Esc>$<Insert><Right>
 inoremap <C-f> <ESC>/
 inoremap <C-r> <ESC>:%s///g<LEFT><LEFT><LEFT>
 
