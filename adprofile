@@ -1,0 +1,36 @@
+#!/bin/bash
+
+REPDIR=/mnt/s/Working/dotfiles
+BASHPROFILE="/home/${USER}/.bash_profile"
+VIMRC="/home/${USER}/.vimrc"
+
+# Default -> Copy USER profiles to Git Repository
+argc=$#
+if [ $argc -eq 0 ]; then
+  if [ -e $BASHPROFILE && $VIMRC ]; then
+    cp $BASHPROFILE $VIMRC $REPDIR
+  else
+    echo "Not Found ${BASHPROFILE} or ${VIMRC}"
+  fi
+else
+  if [ $argc -eq 1 ]; then
+    if [ $1 = "-g" ]; then
+      if [ -e $BASHPROFILE && $VIMRC ]; then
+        cp $BASHPROFILE $VIMRC $REPDIR
+      else
+        echo "Not Found ${BASHPROFILE} or ${VIMRC}"
+      fi
+    elif [ $1 = "-u" ]; then
+      cp "${REPDIR}/.vimrc" "${REPDIR}/.bash_profile" "/home/${USER}"
+    else
+      echo "Usage: adprofile [-g, -u]"
+      echo -e "\t-g: Git-repository to Home-directory"
+      echo -e "\t-u: Home-directory to Git-repository"
+    fi
+  else
+    echo "Usage: adprofile [-g, -u]"
+    echo -e "\t-g: Git-repository to Home-directory"
+    echo -e "\t-u: Home-directory to Git-repository"
+  fi
+fi
+
