@@ -8,28 +8,28 @@ BASHALIASES="/home/${USER}/.bash_aliases"
 # Default -> Copy USER profiles to Git Repository
 argc=$#
 if [ $argc -eq 0 ]; then
-    echo "Usage: adprofile [source_directory = -g, -u]"
-    echo -e "\t-g: GitRepository  to  HomeDirectory"
-    echo -e "\t-u: HomeDirectory  to  GitRepository"
+    echo "Usage: adprofile [source_directory = -gr, -hd]"
+    echo -e "\t-gr: Copy profiles from GitRepository  to  HomeDirectory"
+    echo -e "\t-hd: Copy profiles from HomeDirectory  to  GitRepository"
 else
   if [ $argc -eq 1 ]; then
-    if [ $1 = "-g" ]; then
+    if [ $1 = "-hd" ]; then
       if [ -e $BASHPROFILE ] && [ -e $VIMRC ] && [ -e $BASHALIASES ]; then
         cp $BASHPROFILE $VIMRC $BASHALIASES $REPDIR
       else
         echo "Not Found ${BASHPROFILE} or ${VIMRC} or ${BASHALIASES}"
       fi
-    elif [ $1 = "-u" ]; then
-      cp "${REPDIR}/.vimrc" "${REPDIR}/.bash_profile" "${REPDIR}/.bash_aliases" "/home/${USER}"
+    elif [ $1 = "-gr" ]; then
+      cp "${REPDIR}/.vimrc" "${REPDIR}/.bash_profile" "${REPDIR}/.bash_aliases" "/home/${USER}/"
     else
-      echo "Usage: adprofile [source_directory -g, -u]"
-      echo -e "\t-g: GitRepository  to  HomeDirectory"
-      echo -e "\t-u: HomeDirectory  to  GitRepository"
+      echo "Usage: adprofile [source_directory = -gr, -hd]"
+      echo -e "\t-gr: Copy profiles from GitRepository  to  HomeDirectory"
+      echo -e "\t-hd: Copy profiles from HomeDirectory  to  GitRepository"
     fi
   else
-    echo "Usage: adprofile [source_directory -g, -u]"
-    echo -e "\t-g: GitRepository  to  HomeDirectory"
-    echo -e "\t-u: HomeDirectory  to  GitRepository"
+      echo "Usage: adprofile [source_directory = -gr, -hd]"
+      echo -e "\t-gr: Copy profiles from GitRepository  to  HomeDirectory"
+      echo -e "\t-hd: Copy profiles from HomeDirectory  to  GitRepository"
   fi
 fi
 
