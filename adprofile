@@ -8,7 +8,7 @@ BASHALIASES="/home/${USER}/.bash_aliases"
 # Default -> Copy USER profiles to Git Repository
 argc=$#
 if [ $argc -eq 0 ]; then
-    echo "Usage: adprofile [-g, -u]"
+    echo "Usage: adprofile [source_directory = -g, -u]"
     echo -e "\t-g: GitRepository  to  HomeDirectory"
     echo -e "\t-u: HomeDirectory  to  GitRepository"
 else
@@ -22,12 +22,12 @@ else
     elif [ $1 = "-u" ]; then
       cp "${REPDIR}/.vimrc" "${REPDIR}/.bash_profile" "${REPDIR}/.bash_aliases" "/home/${USER}"
     else
-      echo "Usage: adprofile [-g, -u]"
+      echo "Usage: adprofile [source_directory -g, -u]"
       echo -e "\t-g: GitRepository  to  HomeDirectory"
       echo -e "\t-u: HomeDirectory  to  GitRepository"
     fi
   else
-    echo "Usage: adprofile [-g, -u]"
+    echo "Usage: adprofile [source_directory -g, -u]"
     echo -e "\t-g: GitRepository  to  HomeDirectory"
     echo -e "\t-u: HomeDirectory  to  GitRepository"
   fi
