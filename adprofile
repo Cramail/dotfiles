@@ -3,34 +3,33 @@
 REPDIR=/mnt/s/Working/dotfiles
 BASHPROFILE="/home/${USER}/.bash_profile"
 VIMRC="/home/${USER}/.vimrc"
+BASHALIASES="/home/${USER}/.bash_aliases"
 
 # Default -> Copy USER profiles to Git Repository
 argc=$#
 if [ $argc -eq 0 ]; then
-  if [ -e $BASHPROFILE ] && [ -e $VIMRC ]; then
-    cp $BASHPROFILE $VIMRC $REPDIR
-  else
-    echo "Not Found ${BASHPROFILE} or ${VIMRC}"
-  fi
+    echo "Usage: adprofile [-g, -u]"
+    echo -e "\t-g: GitRepository  to  HomeDirectory"
+    echo -e "\t-u: HomeDirectory  to  GitRepository"
 else
   if [ $argc -eq 1 ]; then
     if [ $1 = "-g" ]; then
-      if [ -e $BASHPROFILE ] && [ -e $VIMRC ]; then
-        cp $BASHPROFILE $VIMRC $REPDIR
+      if [ -e $BASHPROFILE ] && [ -e $VIMRC ] && [ -e $BASHALIASES ]; then
+        cp $BASHPROFILE $VIMRC $BASHALIASES $REPDIR
       else
-        echo "Not Found ${BASHPROFILE} or ${VIMRC}"
+        echo "Not Found ${BASHPROFILE} or ${VIMRC} or ${BASHALIASES}"
       fi
     elif [ $1 = "-u" ]; then
-      cp "${REPDIR}/.vimrc" "${REPDIR}/.bash_profile" "/home/${USER}"
+      cp "${REPDIR}/.vimrc" "${REPDIR}/.bash_profile" "${REPDIR}/.bash_aliases" "/home/${USER}"
     else
       echo "Usage: adprofile [-g, -u]"
-      echo -e "\t-g: Git-repository to Home-directory"
-      echo -e "\t-u: Home-directory to Git-repository"
+      echo -e "\t-g: GitRepository  to  HomeDirectory"
+      echo -e "\t-u: HomeDirectory  to  GitRepository"
     fi
   else
     echo "Usage: adprofile [-g, -u]"
-    echo -e "\t-g: Git-repository to Home-directory"
-    echo -e "\t-u: Home-directory to Git-repository"
+    echo -e "\t-g: GitRepository  to  HomeDirectory"
+    echo -e "\t-u: HomeDirectory  to  GitRepository"
   fi
 fi
 
