@@ -65,3 +65,8 @@ set t_Co=256
 set background=dark
 
 """ etc...
+augroup fileTypeTabSetting
+  autocmd!
+  autocmd BufNewFile,BufRead Makefile setlocal noexpandtab nosmartindent
+  autocmd BufNewFile,BufRead GNUMakefile setlocal noexpandtab nosmartindent
+augroup END
