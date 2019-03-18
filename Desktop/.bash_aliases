@@ -39,7 +39,7 @@ alias calc="calc.exe &"
 alias ep="explorer.exe ."
 alias powershell="powershell.exe"
 alias minecraft='/mnt/s/Game/MineCraft/MinecraftLauncher.exe'
-
+alias gsync='/mnt/c/Program\ Files/Google/Drive/googledrivesync.exe &'
 
 #------------------------------------------------------------
 #  SSH 
