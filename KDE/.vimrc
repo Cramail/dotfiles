@@ -40,8 +40,8 @@ nnoremap sl :<C-w>l
 nnoremap wq :wq<CR>
 " qqで保存せず終了
 nnoremap qq :q!<CR>
-" Wで保存
-nnoremap W :w<CR>
+" wwで保存
+nnoremap ww :w<CR>
 " Ctrl+o でファイルを開く
 nnoremap <C-o> :e
 " Ctrl+f で検索
