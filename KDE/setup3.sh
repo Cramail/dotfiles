@@ -5,6 +5,8 @@ cp ~/Downloads/vim-hybrid/colors/hybrid.vim ~/.vim/colors
 
 # bashrc
 echo "PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '" >> ~/.bashrc
+echo "export EDITOR=vim"
+echo "export LANG=ja_JP.UTF-8"
 
 # pyenv install
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
