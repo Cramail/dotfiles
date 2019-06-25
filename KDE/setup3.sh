@@ -1,3 +1,6 @@
+# bashrc
+echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\W\[\033[00m\]\$ '" >> ~/.bashrc
+
 # vim
 if [ -e "~/.vim/colors" ] ; then
   echo "Create a directory ~/.vim/colors"
