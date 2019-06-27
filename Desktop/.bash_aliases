@@ -1,5 +1,5 @@
 ### Windows Username for WSL 
-WINUSER=telmi
+export WINUSER=telmi
 
 #------------------------------------------------------------
 #  Command alias
@@ -21,11 +21,8 @@ alias vi="vim"
 #------------------------------------------------------------
 #  Alias of ChangeDirectory
 #------------------------------------------------------------
-alias cdwo="cd /mnt/c/Users/${WINUSER}/OneDrive/WorkingOnedrive"
 alias cdc="cd /mnt/c"
 alias cddl="cd /mnt/c/Users/${WINUSER}/Downloads"
-alias cddc="cd /mnt/c/telmi/Dropbox/Class/H30"
-alias cddb="cd /mnt/c/telmi/Dropbox"
 alias cdw="cd /mnt/s/working"
 alias ..="cd ../"
 
