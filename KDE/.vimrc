@@ -1,66 +1,53 @@
-syntax enable
-set number
-set wrap
-set noswapfile
-set cursorline
-set ambiwidth=double
-set hlsearch
-set smartcase
-set mouse=a
-set wildmenu
-set ruler
+:syntax enable
+:set number
+:set wrap
+:set noswapfile
+:set autoindent
+:set expandtab
+:set shiftwidth=2
+:set softtabstop=2
+:set smartindent
+:set cursorline
+:set ambiwidth=double
+:set wildmenu
+:set hlsearch
+:set smartcase
+:set incsearch
+:set mouse=a
+:set ruler
+:set cursorline
+:set title
+:set showcmd
+:set laststatus=2
 
-" Color scheme
+
+""" Nomal Mode
+nnoremap Y y$
+nnoremap ss :split<CR>
+nnoremap vs :vsplit<CR>
+nnoremap sj <C-w>j
+nnoremap sh <C-w>h
+nnoremap sl <C-w>l
+nnoremap sk <C-w>k
+nnoremap wq :wq<CR>
+nnoremap qq :q!<CR>
+nnoremap ww :w<CR>
+nnoremap <C-o> :e 
+nnoremap <C-f> /
+nnoremap <C-r> :%s///g<LEFT><LEFT><LEFT>
+nnoremap ; :
+
+""" Insert Mode
+inoremap <C-d> $
+inoremap <C-b> \
+inoremap JK <Esc>
+inoremap jk <Esc>
+inoremap <silent> <C-a> <Esc>^<Insert>
+inoremap <silent> <C-e> <Esc>$<Insert><Right>
+inoremap <C-f> <ESC>/
+inoremap <C-r> <ESC>:%s///g<LEFT><LEFT><LEFT>
+
+""" Color Scheme
 set t_Co=256
 colorscheme slate
 set background=dark
-
-" Indent
-set tabstop=4
-set autoindent
-set expandtab
-set shiftwidth=2
-set smartindent
-set softtabstop=2
-
-" =========================
-"   Normal Mode
-" =========================
-" 行末までヤンク
-nnoremap Y y$
-" ペイン分割
-nnoremap ss :split<CR>
-nnoremap sv :vsplit<CR>
-" ペイン移動
-nnoremap sj :<C-w>j
-nnoremap sk :<C-w>k
-nnoremap sh :<C-w>h
-nnoremap sl :<C-w>l
-" wqで保存して終了
-nnoremap wq :wq<CR>
-" qqで保存せず終了
-nnoremap qq :q!<CR>
-" wwで保存
-nnoremap ww :w<CR>
-" Ctrl+o でファイルを開く
-nnoremap <C-o> :e
-" Ctrl+f で検索
-nnoremap <C-f> /
-" Ctrl+r で置換
-nnoremap <C-r> :%s///g<LEFT><LEFT><LEFT>
-
-" =======================
-"   Insert Mode
-" =======================
-" jk, JK で ESC
-inoremap jk <ESC>
-inoremap JK <ESC>
-" Ctrl+a で行頭へ移動, Ctrl+eで行末へ移動
-inoremap <silent> <C-a> <ESC>^<INSERT>
-inoremap <silent> <C-e> <ESC>$<INSERT><RIGHT>
-" Ctrl+f で検索
-inoremap <C-f> <ESC>/
-" Ctrl+r で置換
-inoremap <C-r> <ESC>:%s///g<LEFT><LEFT><LEFT>
-
-
