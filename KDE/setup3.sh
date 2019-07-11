@@ -1,8 +1,11 @@
 # bashrc
 echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\W\[\033[00m\]\$ '" >> ~/.bashrc
 echo "##-------- Environment Variables ---------##" >> ~/.bashrc
+echo "export PAGER=less" >> ~/.bashrc
 echo "export EDITOR=vim" >> ~/.bashrc
 echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
+
+
 
 # vim
 #if [ -e "~/.vim/colors" ] ; then
