@@ -1,25 +1,25 @@
-:syntax enable
-:set number
-:set wrap
-:set noswapfile
-:set autoindent
-:set expandtab
-:set shiftwidth=2
-:set softtabstop=2
-:set smartindent
-:set cursorline
-:set ambiwidth=double
-:set wildmenu
-:set hlsearch
-:set smartcase
-:set incsearch
-:set mouse=a
-:set ruler
-:set cursorline
-:set title
-:set showcmd
-:set laststatus=2
+syntax enable
+set number
+set wrap
+set noswapfile
+set ambiwidth=double
+set wildmenu
+set hlsearch
+set smartcase
+set incsearch
+set mouse=a
+set ruler
+set cursorline
+set title
+set showcmd
+set laststatus=2
 
+""" Indent 
+set autoindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set smartindent
 
 """ Nomal Mode
 nnoremap Y y$

@@ -10,4 +10,6 @@ alias ps='ps --sort=start_time'
 alias vi='vim'
 alias nvidia-smi='watch -n 5 nvidia-smi'
 alias jupyter-notebook="jupyter-notebook --ip=${HOSTNAME}.kde.cs.tut.ac.jp --port=50000"
+alias jupyter-lab="jupyter-lab --ip=${HOSTNAME}.kde.cs.tut.ac.jp --port=50001"
+
 
