@@ -1,4 +1,6 @@
 ##--------------- alias ---------------##
+alias grep='grep --color=auto'
+alias ps='ps -f --sort=start_time'
 alias rm='rm -i'
 alias ls='ls --color=auto'
 alias la='ls -a'
