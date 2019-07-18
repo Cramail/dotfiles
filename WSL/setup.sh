@@ -1,7 +1,8 @@
 #!/bin/bash
-BRC="~/.bashrc"
-AIL="~/.bash_aliases"
+BRC="/home/shinohara/.bashrc"
+AIL="/home/shinohara/.bash_aliases"
 
+<<CO
 # Environment Variables
 echo " [*] Write environment variables"
 echo "##--------  Windows Information  ---------##" >> $BRC
@@ -19,14 +20,19 @@ echo -e " [!] Success writing environment variables\n"
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install -y git vim less htop make g++ zip cmake man net-tools bash-completion tmux gcc
+CO
 
 # vim 
 if [ -e "~/.vim/colors"  ]; then
+  echo " [*] Made directory '~/.vim/colors'"
+else
   echo " [*] Make directory '~/.vim/colors' "
   mkdir -p ~/.vim/colors
   echo -e " [!] Success making directory\n"
 fi
 if [ -e "~/.vim/colors/hybrid.vim" ]; then
+  echo " [*] Downloaded hybrid.vim"
+else
   echo " [*] Download vim's colorscheme 'hybrid.vim' "
   git clone https://github.com/w0ng/vim-hybrid.git ~/vim-hybrid
   cp ~/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
@@ -35,6 +41,8 @@ fi
 
 # python
 if [ -e "~/.pyenv" ]; then
+  echo " [*] Downloaded pyenv"
+else
   echo " [*] Download pyenv for python"
   git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   echo "Add environment variable for pyenv"
