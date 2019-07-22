@@ -64,6 +64,12 @@ colorscheme hybrid
 set t_Co=256
 set background=dark
 
+""" Keep Cursor
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") | 
+  \ exe "normal g`\"" | endif
+augroup END
+
 """ etc...
 augroup fileTypeTabSetting
   autocmd!
