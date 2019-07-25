@@ -11,12 +11,11 @@ if [ -e ~/.pyenv ]; then
   pyenv global miniconda3-4.3.30
   pyenv rehash
   echo "[*] Begin install packages"
-  conda update conda -y
-  conda install -y pip 
-  pip install -U -y pip 
-  pip install -y progressbar2 
-  pip install -y beautifulsoup4 
-  pip install -y requests 
-  pip install -y nndownload 
+  pip install -U pip 
+  pip install progressbar2 
+  pip install beautifulsoup4 
+  pip install requests 
+  pip install nndownload
+  pip completion --bash >> $HOME/.profile
   echo "[!] Success install packages"
 fi
