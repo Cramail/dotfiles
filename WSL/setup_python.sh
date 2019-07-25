@@ -8,13 +8,15 @@ if [ -e ~/.pyenv ]; then
     pyenv install miniconda3-4.3.30
     echo "[!] Success install miniconda3-4.3.30"
   fi
+  pyenv global miniconda3-4.3.30
+  pyenv rehash
   echo "[*] Begin install packages"
   conda update conda -y
-  conda install pip -y
-  pip install -U pip -y
-  pip install progressbar2 -y
-  pip install beautifulsoup4 -y
-  pip install requests -y
-  pip install nndownload -y
+  conda install -y pip 
+  pip install -U -y pip 
+  pip install -y progressbar2 
+  pip install -y beautifulsoup4 
+  pip install -y requests 
+  pip install -y nndownload 
   echo "[!] Success install packages"
 fi
