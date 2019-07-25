@@ -44,14 +44,14 @@ else
   echo "[*] Download vim's colorscheme 'hybrid.vim' "
   git clone https://github.com/w0ng/vim-hybrid.git ~/vim-hybrid
   cp ~/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
-  echo "[!] Success downloading hybrid.vim"
+  echo "[!] Success download hybrid.vim"
 fi
 VIM
 
 <<PYENV
 # python
 if [ -e $HOME/.pyenv ]; then
-  echo "[!] Already download pyenv"
+  echo "[!] Already exist pyenv"
 else
   echo "[*] Download pyenv for python"
   git clone https://github.com/pyenv/pyenv.git ~/.pyenv
@@ -60,7 +60,7 @@ else
   echo 'export PYENV_HOME=$HOME/.pyenv' >> $BRC
   echo 'export PATH=$PATH:$PYENV_HOME/bin' >> $BRC
   echo 'eval "$(pyenv init -)"' >> $BRC
-  echo "[!] Success downloading pyenv"
+  echo "[!] Success download pyenv"
 fi
 PYENV
 
