@@ -1,6 +1,7 @@
 #!/bin/bash
-BRC="/home/shinohara/.bashrc"
-AIL="/home/shinohara/.bash_aliases"
+BRC="$HOME/.bashrc"
+AIL="$HOME/.bash_aliases"
+DOTFILES="$HOME/dotfiles/WSL"
 
 <<CO
 # Environment Variables
@@ -17,7 +18,9 @@ echo "export EDITOR=vim" >> $BRC
 echo "export LC_CTYPE=ja_JP.UTF-8" >> $BRC
 echo -e "export LANG=ja_JP.UTF-8\n" >> $BRC
 echo -e "[!] Success writing environment variables\n"
-
+echo "[*] Write aliases in .bash_aliases"
+cp "$DOTFILES/.bash_aliases $HOME"
+echo "[!] Success write aliases"
 # Update apt and Install packages
 sudo apt update -y
 sudo apt upgrade -y
