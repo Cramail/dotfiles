@@ -6,7 +6,7 @@ DOTFILES="$HOME/dotfiles/WSL"
 <<BASH
 # Environment Variables
 echo "[*] Write environment variables"
-echo -e"\n##--------  Windows Information  ---------##" >> $BRC
+echo -e "\n##--------  Windows Information  ---------##" >> $BRC
 echo "WINNAME=telmi" >> $BRC
 echo "DESKTOP=/mnt/c/Users/telmi/Desktop" >> $BRC
 echo "DOWNLOADS=/mnt/c/Users/telmi/Downloads" >> $BRC
@@ -19,9 +19,10 @@ echo "export LC_CTYPE=ja_JP.UTF-8" >> $BRC
 echo "export LANG=ja_JP.UTF-8\n" >> $BRC
 echo "[!] Success writing environment variables"
 echo "[*] Copy some profiles"
-cp "$DOTFILES/.bash_aliases" "$HOME/"
-cp "$DOTFILES/.tmux.conf" "$HOME/"
-cp "$DOTFILES/.gitconfig" "$HOME/"
+cp $DOTFILES/.vimrc $HOME/
+cp $DOTFILES/.bash_aliases $HOME/
+cp $DOTFILES/.tmux.conf $HOME/
+cp $DOTFILES/.gitconfig $HOME/
 echo "[!] Success copy"
 # Update apt and Install packages
 sudo apt update -y
