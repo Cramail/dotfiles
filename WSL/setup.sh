@@ -19,9 +19,9 @@ echo "export LC_CTYPE=ja_JP.UTF-8" >> $BRC
 echo -e "export LANG=ja_JP.UTF-8\n" >> $BRC
 echo -e "[!] Success writing environment variables\n"
 echo "[*] Copy some profiles"
-cp "$DOTFILES/.bash_aliases $HOME/"
-cp "$DOTFILES/.tmux.conf $HOME/"
-cp "$DOTFILES/.gitconfig $HOME/"
+cp "$DOTFILES/.bash_aliases" "$HOME/"
+cp "$DOTFILES/.tmux.conf" "$HOME/"
+cp "$DOTFILES/.gitconfig" "$HOME/"
 echo "[!] Success copy"
 # Update apt and Install packages
 sudo apt update -y
