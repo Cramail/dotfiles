@@ -43,7 +43,7 @@ nnoremap sl <C-w>l
 nnoremap sk <C-w>k
 nnoremap wq :wq<CR>
 nnoremap qq :q!<CR>
-nnoremap W :w<CR>
+nnoremap ww :w<CR>
 nnoremap <C-o> :e 
 nnoremap <C-f> /
 nnoremap <C-r> :%s///g<LEFT><LEFT><LEFT>
