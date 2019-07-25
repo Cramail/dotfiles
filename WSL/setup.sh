@@ -31,15 +31,15 @@ BASH
 
 <<VIM
 # vim 
-if [ -e "~/.vim/colors"  ]; then
-  echo "[*] Made directory '~/.vim/colors'"
+if [ -e $HOME/.vim/colors ]; then
+  echo "[*] Already make directory '$HOME/.vim/colors'"
 else
-  echo "[*] Make directory '~/.vim/colors' "
-  mkdir -p ~/.vim/colors
+  echo "[*] Make directory '$HOME/.vim/colors' "
+  mkdir -p $HOME/.vim/colors
   echo "[!] Success making directory"
 fi
-if [ -e "~/.vim/colors/hybrid.vim" ]; then
-  echo "[!] Already download hybrid.vim"
+if [ -e $HOME/.vim/colors/hybrid.vim ]; then
+  echo "[!] Already exist hybrid.vim"
 else
   echo "[*] Download vim's colorscheme 'hybrid.vim' "
   git clone https://github.com/w0ng/vim-hybrid.git ~/vim-hybrid
@@ -50,7 +50,7 @@ VIM
 
 <<PYENV
 # python
-if [ -e "~/.pyenv" ]; then
+if [ -e $HOME/.pyenv ]; then
   echo "[!] Already download pyenv"
 else
   echo "[*] Download pyenv for python"
