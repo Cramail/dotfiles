@@ -16,7 +16,7 @@ echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:
 echo "export PAGER=less" >> $BRC
 echo "export EDITOR=vim" >> $BRC
 echo "export LC_CTYPE=ja_JP.UTF-8" >> $BRC
-echo "export LANG=ja_JP.UTF-8\n" >> $BRC
+echo -e "export LANG=ja_JP.UTF-8\n" >> $BRC
 echo "[!] Success writing environment variables"
 echo "[*] Copy some profiles"
 cp $DOTFILES/.vimrc $HOME/
