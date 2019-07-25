@@ -27,7 +27,8 @@ echo "[!] Success copy"
 # Update apt and Install packages
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install -y git vim less htop make g++ zip cmake man net-tools bash-completion tmux gcc build-essential libssl-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl libedit-dev
+sudo apt install -y git vim less htop make g++ zip cmake man net-tools bash-completion tmux gcc build-essential libssl-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl libedit-dev language-pack-ja
+sudo update-locale LANG=ja_JP.UTF-8
 BASH
 
 <<VIM
