@@ -31,6 +31,18 @@ sudo apt install -y git vim less htop make g++ zip cmake man net-tools bash-comp
 sudo update-locale LANG=ja_JP.UTF-8
 BASH
 
+<<MOUNT
+# mount drives
+if [ -e /mnt/c ]; then
+  sudo umount /mnt/c
+  sudo mount -t drvfs C: /mnt/c -o metadata
+fi
+if [ -e /mnt/s ]; then
+  sudo umount /mnt/s
+  sudo mount -t drvfs S: /mnt/s -o metadata
+fi
+MOUNT
+
 <<VIM
 # vim 
 if [ -e $HOME/.vim/colors ]; then
