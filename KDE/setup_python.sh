@@ -14,7 +14,6 @@ echo "[*] Install new node.js"
 curl -OL https://nodejs.org/dist/v10.16.0/node-v10.16.0-linux-x64.tar.xz
 tar -Jxf node-v10.16.0-linux-x64.tar.xz
 mv node-v10.16.0.linux-x64 /home/shinohara/.nodejs
-mv /home/shinoahra/.nodejs/bin/node /home/shinohara/.nodejs/bin/nodejs
 rm -rf node-v10.16.0-linux-x64.tar.xz
 echo -e "\nexport PATH=$PATH:/home/shinohara/.nodejs/bin" >> /home/shinohara/.bashrc
 
