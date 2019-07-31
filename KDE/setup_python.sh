@@ -16,7 +16,7 @@ tar -Jxf node-v10.16.0-linux-x64.tar.xz
 mv node-v10.16.0.linux-x64 /home/shinohara/.nodejs
 mv /home/shinoahra/.nodejs/bin/node /home/shinohara/.nodejs/bin/nodejs
 rm -rf node-v10.16.0-linux-x64.tar.xz
-echo -e "\nPATH=$PATH:/home/shinohara/.nodejs/bin" >> /home/shinohara/.bashrc
+echo -e "\nexport PATH=$PATH:/home/shinohara/.nodejs/bin" >> /home/shinohara/.bashrc
 
 echo "[*] Enable jupyter-lab's extentions"
 jupyter labextension install @jupyter-widgets/jupyterlab-manage
