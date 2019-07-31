@@ -18,7 +18,7 @@ rm -rf node-v10.16.0-linux-x64.tar.xz
 echo -e "\nexport PATH=$PATH:/home/shinohara/.nodejs/bin" >> /home/shinohara/.bashrc
 
 echo "[*] Enable jupyter-lab's extentions"
-jupyter labextension install @jupyter-widgets/jupyterlab-manage
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter nbextension enable --py --sys-prefix widgetsnbextension
 jupyter labextension install @lckr/jupyterlab_variableinspector
 
