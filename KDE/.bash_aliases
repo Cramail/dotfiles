@@ -8,6 +8,7 @@ alias ks='ls'
 alias sl='ls'
 alias ps='ps --sort=start_time -f'
 alias vi='vim'
+alias tmux='tmux -2'
 alias gsmi='watch -n 5 nvidia-smi'
 alias jupyter-notebook="jupyter-notebook --ip=${HOSTNAME}.kde.cs.tut.ac.jp --port=50000"
 alias jupyter-lab="jupyter-lab --ip=${HOSTNAME}.kde.cs.tut.ac.jp --port=50001"
