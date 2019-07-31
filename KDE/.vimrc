@@ -60,7 +60,7 @@ inoremap <C-f> <ESC>/
 inoremap <C-r> <ESC>:%s///g<LEFT><LEFT><LEFT>
 
 """ ColorScheme
-colorscheme slate
+colorscheme hybrid
 set t_Co=256
 set background=dark
 
