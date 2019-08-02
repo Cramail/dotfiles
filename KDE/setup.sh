@@ -1,11 +1,16 @@
 BRC="~/.bashrc"
 
 # bashrc
+echo "[*] Write environment variables in bashrc"
 echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\W\[\033[00m\]\$ '" >> $BRC
 echo "##-------- Environment Variables ---------##" >> $BRC
 echo "export PAGER=less" >> $BRC
 echo "export EDITOR=vim" >> $BRC
 echo "export LANG=ja_JP.UTF-8" >> $BRC
+echo "[*] Copy profiles"
+cp $HOME/dotfiles/KDE/.vimrc $HOME/
+cp $HOME/dotfiles/KDE/.bash_aliases $HOME/
+cp $HOME/dotfiles/KDE/.tmux.conf $HOME/
 
 # vim
 

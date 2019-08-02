@@ -29,11 +29,14 @@ if [ -e $HOME/dotfiles/WSL/setup.sh ]; then
         rm -f $HOME/setup$j.sh
         (( j++ ))
       done
+      chmod +x $HOME/setup.sh
       echo "[!] Success output"
     fi
   else
     echo "[*] Output executable setup script to $HOME/setup.sh"
     cat ~/dotfiles/WSL/setup.sh | egrep -v "^.*?BASH" | egrep -v "^.*?PYENV" | egrep -v "^.*?VIM" | egrep -v "^.*?MOUNT" > $HOME/setup.sh
+    chmod +x $HOME/setup.sh
     echo "[!] Success output"
   fi
 fi
+
