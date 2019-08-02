@@ -15,9 +15,9 @@ echo "##-------- Environment Variables ---------##" >> $BRC
 echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\W\[\033[00m\]\$ '" >> $BRC
 echo "export PAGER=less" >> $BRC
 echo "export EDITOR=vim" >> $BRC
-echo "export LC_CTYPE=ja_JP.UTF-8" >> $BRC
 echo -e "export LANG=ja_JP.UTF-8\n" >> $BRC
 echo "[!] Success writing environment variables"
+# Copy profiles
 echo "[*] Copy some profiles"
 cp $DOTFILES/.vimrc $HOME/
 cp $DOTFILES/.bash_aliases $HOME/
@@ -32,7 +32,7 @@ sudo update-locale LANG=ja_JP.UTF-8
 BASH
 
 <<MOUNT
-# mount drives
+# Mount drives
 if [ -e /mnt/c ]; then
   sudo umount /mnt/c
   sudo mount -t drvfs C: /mnt/c -o metadata
