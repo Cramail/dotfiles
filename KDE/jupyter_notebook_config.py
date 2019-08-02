@@ -1,5 +1,6 @@
 # Configuration file for jupyter-notebook.
 
+# this file is putted $HOME/.jupyter/jupyter_notebook_config.py
 c = get_config()
 c.NotebookApp.token=''
 c.NotebookApp.open_browser = False
