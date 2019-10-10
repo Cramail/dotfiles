@@ -1,29 +1,51 @@
+" release autogroup in MtAutoCmd
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
+""" Main Setting
 syntax enable
-set number
-set nowrap
 set mouse=a
-set backspace=indent,eol,start
 set showcmd
 set cursorline
-set noswapfile
 set ruler
 set display=lastline
 set pumheight=10
-set showmatch
-set matchtime=2
 set encoding=utf-8
 set fileencoding=utf-8
-set vb t_vb=
 set fileformats=unix,dos,mac
 set ambiwidth=double
 set wildmenu
 set history=100
+set vb t_vb=
+set novisualbell
+
+""" Edit Setting
+set shiftround  " <, >でインデントの際にshiftwidthの倍数に丸める
+set infercase   " 補完時に大文字小文字を区別しない
+set virtualedit=all " 文字がない場所でもカーソルを動けるようにする
+set hidden
+set switchbuf=useopen
+set showmatch   " カッコ対応をハイライト表示
+set matchtime=2 " 
+set matchpairs& matchpairs==<:>  " カッコ対応の対象に<>を追加
+set backspace=indent,eol,start   " BSですべてを消せるように
+set nowritebackup  " バックアップファイルを作らない
+set noswapfile     " スワップファイルを作らない
+set nobackup
+
+""" Visual Setting
+set list      " 不可視文字の可視化
+set number    " 行数の表示
+set nowrap    " 折り返さない
+set textwidth=0   " 自動改行の禁止
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲  " 不可視文字の変更
 
 """ Search Setting
-set hlsearch
-set ignorecase
-set smartcase
-set incsearch
+set hlsearch    " 検索をハイライト表示
+set ignorecase  " 大文字小文字の区別をしない
+set smartcase   " 大文字がクエリに含まれるなら区別する
+set incsearch   " インクリメンタルサーチ
 
 """ Indent Setting
 set autoindent
@@ -48,6 +70,9 @@ nnoremap <C-o> :e
 nnoremap <C-f> /
 nnoremap <C-r> :%s///g<LEFT><LEFT><LEFT>
 nnoremap ; :
+nnoremap <silent> <Esc><Esc> :nohlserch<CR>
+nnoremap j gj
+nnoremap k gk
 
 """ Insert Mode
 inoremap <C-d> $
