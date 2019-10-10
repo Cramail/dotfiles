@@ -28,7 +28,7 @@ set hidden
 set switchbuf=useopen
 set showmatch   " カッコ対応をハイライト表示
 set matchtime=2 " 
-set matchpairs& matchpairs==<:>  " カッコ対応の対象に<>を追加
+set matchpairs& matchpairs+=<:>  " カッコ対応の対象に<>を追加
 set backspace=indent,eol,start   " BSですべてを消せるように
 set nowritebackup  " バックアップファイルを作らない
 set noswapfile     " スワップファイルを作らない
