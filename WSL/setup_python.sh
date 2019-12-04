@@ -16,6 +16,9 @@ if [ -e ~/.pyenv ]; then
   pip install beautifulsoup4 
   pip install requests 
   pip install nndownload
+  pip install pathlib
+  pip install img2pdf
+  pip install pypdf2
   pip completion --bash >> $HOME/.profile
   echo "[!] Success install packages"
 fi
